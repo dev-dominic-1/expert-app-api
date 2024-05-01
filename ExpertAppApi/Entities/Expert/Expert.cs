@@ -13,8 +13,8 @@ public class Expert
     [MaxLength(64)]
     public string Bio { get; set; } = "";
 
-    public ICollection<ExpertPhotoUrl>? PhotoUrl { get; set; } = [];
+    public ExpertPhotoUrl? PhotoUrl { get; set; }
 
-    public ICollection<ExpertFees>? Fees { get; set; } = [];
+    public ExpertFees? Fees { get; set; }
 
 }

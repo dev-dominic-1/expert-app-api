@@ -10,7 +10,10 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
     {
         base.OnModelCreating(modelBuilder);
         EntityTypeBuilder<ExpertPhotoUrl> expertPhotoUrl = modelBuilder.Entity<ExpertPhotoUrl>();
-        expertPhotoUrl.HasOne(e => e.Expert).WithMany(e => e.PhotoUrl).OnDelete(DeleteBehavior.Cascade);
+        expertPhotoUrl.HasOne(e => e.Expert).WithOne(e => e.PhotoUrl).OnDelete(DeleteBehavior.Cascade);
+
+        EntityTypeBuilder<ExpertFees> expertFees = modelBuilder.Entity<ExpertFees>();
+        expertFees.HasOne(e => e.Expert).WithOne(e => e.Fees).OnDelete(DeleteBehavior.Cascade);
     }
 
     public DbSet<Expert> Expert { get; set; }

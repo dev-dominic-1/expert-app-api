@@ -10,11 +10,11 @@ namespace ExpertAppApi.Controllers;
 public class ExpertController(ILogger<ExpertController> logger, DataContext context)
 {
     [HttpGet(Name = "GetAllExperts")]
-    public async Task<IEnumerable<Expert>> Get([FromQuery] bool includePhotoUrl, [FromQuery] bool includeFees)
+    public async Task<IEnumerable<Expert>?> Get([FromQuery] bool includePhotoUrl, [FromQuery] bool includeFees)
     {
-        DbSet<Expert> temp = context.Expert;
-        if (includePhotoUrl) temp.Include(e => e.PhotoUrl);
-        if (includeFees) temp.Include(e => e.Fees);
+        var temp = context.Expert.AsQueryable();
+        if (includePhotoUrl) temp = temp.Include(e => e.PhotoUrl);
+        if (includeFees) temp = temp.Include(e => e.Fees);
         return await temp.ToListAsync();
     }
 }

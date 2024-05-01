@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ExpertAppApi.Entities;
 
+[Table("expert_photo_url")]
 public class ExpertPhotoUrl
 {
     public int Id { get; init; }
@@ -15,7 +17,7 @@ public class ExpertPhotoUrl
 
     [MaxLength(512)] public string Large { get; set; } = "";
     
-    [ForeignKey("FK__ExpertPhotoUrl_ExpertId__Expert_Id")]
+    [ForeignKey("ExpertId"), JsonIgnore]
     public virtual Expert? Expert { get; init; }
     
 }
