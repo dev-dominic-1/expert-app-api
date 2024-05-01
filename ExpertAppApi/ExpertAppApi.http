@@ -1,0 +1,6 @@
+@ExpertAppApi_HostAddress = http://localhost:5087
+
+GET {{ExpertAppApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
