@@ -18,4 +18,5 @@ public class Call
     
     [ForeignKey("ExpertId")]
     public virtual Expert? Expert { get; set; }
+    
 }
