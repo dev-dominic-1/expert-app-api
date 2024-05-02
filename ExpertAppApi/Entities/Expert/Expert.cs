@@ -16,8 +16,11 @@ public class Expert
     public ExpertPhotoUrl? PhotoUrl { get; set; }
 
     public ExpertFees? Fees { get; set; }
-    
+
+    /// <summary>
+    /// Here for 1-way binding purposes. Query this data from <i>CallController.GetByExpertId</i>
+    /// </summary>
     [JsonIgnore]
-    public IEnumerable<Call.Call>? Calls { get; set; }
+    public IEnumerable<Call.Call>? Calls { get; } = null;
 
 }
