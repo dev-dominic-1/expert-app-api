@@ -1,4 +1,5 @@
 ﻿using ExpertAppApi.Entities;
+using ExpertAppApi.Entities.Call;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -14,9 +15,20 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
 
         EntityTypeBuilder<ExpertFees> expertFees = modelBuilder.Entity<ExpertFees>();
         expertFees.HasOne(e => e.Expert).WithOne(e => e.Fees).OnDelete(DeleteBehavior.Cascade);
+
+        EntityTypeBuilder<Call> call = modelBuilder.Entity<Call>();
+        call.HasOne(e => e.Expert).WithMany(e => e.Calls).OnDelete(DeleteBehavior.Cascade);
+
+        EntityTypeBuilder<CallDetails> callDetails = modelBuilder.Entity<CallDetails>();
+        callDetails.HasOne(e => e.Call).WithOne(e => e.CallDetails).OnDelete(DeleteBehavior.Cascade);
     }
 
+    // EXPERT DATA
     public DbSet<Expert> Expert { get; set; }
     public DbSet<ExpertPhotoUrl> ExpertPhotoUrl { get; set; }
     public DbSet<ExpertFees> ExpertFee { get; set; }
+    
+    // CALL DATA
+    public DbSet<Call> Call { get; set; }
+    public DbSet<CallDetails> CallDetails { get; set; }
 }

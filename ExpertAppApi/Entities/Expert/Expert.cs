@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ExpertAppApi.Entities;
 
@@ -16,5 +16,8 @@ public class Expert
     public ExpertPhotoUrl? PhotoUrl { get; set; }
 
     public ExpertFees? Fees { get; set; }
+    
+    [JsonIgnore]
+    public IEnumerable<Call.Call>? Calls { get; set; }
 
 }
