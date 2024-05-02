@@ -34,4 +34,11 @@ public class CallController(DataContext context)
         var temp = PrimeGetRequestQuery(includeCallDetails, includeExpert);
         return await temp.Where(e => e.Id == id).FirstAsync();
     }
+
+    [HttpGet, Route("GetByExpertId")]
+    public async Task<IEnumerable<Call>?> GetByExpertId([FromQuery] int expertId)
+    {
+        var temp = PrimeGetRequestQuery(true, false);
+        return await temp.Where(e => e.ExpertId == expertId).ToListAsync();
+    }
 }
