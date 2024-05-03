@@ -1,5 +1,6 @@
 ﻿using ExpertAppApi.Entities;
 using ExpertAppApi.Entities.Call;
+using ExpertAppApi.Entities.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -21,6 +22,9 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
 
         EntityTypeBuilder<CallDetails> callDetails = modelBuilder.Entity<CallDetails>();
         callDetails.HasOne(e => e.Call).WithOne(e => e.CallDetails).OnDelete(DeleteBehavior.Cascade);
+
+        EntityTypeBuilder<User> user = modelBuilder.Entity<User>();
+        user.Property(e => e.Password);
     }
 
     // EXPERT DATA
@@ -31,4 +35,7 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
     // CALL DATA
     public DbSet<Call> Call { get; set; }
     public DbSet<CallDetails> CallDetails { get; set; }
+    
+    // USER DATA
+    public DbSet<User> User { get; set; }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExpertAppApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e08d3ccd752919905e33882a1f763c70c7531028")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f6de26fff95ecba13eae43f53c053bedef19014")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExpertAppApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExpertAppApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,7 +7,7 @@ namespace ExpertAppApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class ExpertController(ILogger<ExpertController> logger, DataContext context)
+public class ExpertController(DataContext context)
 {
     private IQueryable<Expert> PrimeGetRequestQuery(bool includePhotoUrl, bool includeFees)
     {
