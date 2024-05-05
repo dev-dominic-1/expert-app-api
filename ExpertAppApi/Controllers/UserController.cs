@@ -12,18 +12,26 @@ namespace ExpertAppApi.Controllers;
 [Route("[controller]")]
 public class UserController(DataContext context, EncryptionService encrypt) : ControllerBase
 {
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<User>?>> Get()
+    private IQueryable<User> PrimeGetRequestQuery(bool includePhotoUrl)
     {
-        var temp = await context.User.ToListAsync();
-        return Ok(temp);
+        var temp = context.User.AsQueryable();
+        if (includePhotoUrl) temp = temp.Include(e => e.PhotoUrl);
+        return temp;
+    }
+    
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<User>?>> Get([FromQuery] bool includePhotoUrl)
+    {
+        var temp = PrimeGetRequestQuery(includePhotoUrl);
+        return Ok(await temp.ToListAsync());
     }
 
     [HttpGet, Route("GetById")]
-    public async Task<IActionResult> GetById([FromQuery] int id)
+    public async Task<IActionResult> GetById([FromQuery] int id, [FromQuery] bool includePhotoUrl)
     {
-        var temp = await context.User.Where(e => e.Id == id).FirstOrDefaultAsync();
-        if (temp == null) return NotFound("No User entry found with Id=" + id);
+        var temp = PrimeGetRequestQuery(includePhotoUrl);
+        var result = await temp.Where(e => e.Id == id).FirstOrDefaultAsync();
+        if (result == null) return NotFound("No User entry found with Id=" + id);
         return Ok(temp);
     }
 
@@ -61,6 +69,31 @@ public class UserController(DataContext context, EncryptionService encrypt) : Co
         {
             return Problem(e.Message);
         }
+    }
+
+    [HttpPatch, Route("SetPassword")]
+    public async Task<IActionResult> SetPassword([FromBody] SetPassword data)
+    {
+        var task = context.User.FindAsync(data.Id);
+        if (data.Password.IsNullOrEmpty() || data.Password.Length < 8)
+            return BadRequest("Password must be at least 8 characters");
+        User? user = await task;
+        if (user == null) return NotFound("No User entry found with Id=" + data.Id);
+        user.Password = encrypt.Encrypt(data.Password);
+        await context.SaveChangesAsync();
+        return Ok(user);
+    }
+
+    [HttpPatch, Route("SetName")]
+    public async Task<IActionResult> SetName([FromBody] SetName data)
+    {
+        var task = context.User.FindAsync(data.Id);
+        if (data.Name.IsNullOrEmpty()) return BadRequest("Name field must be included in request");
+        User? user = await task;
+        if (user == null) return NotFound("No User entry found with Id=" + data.Id);
+        user.Name = data.Name;
+        await context.SaveChangesAsync();
+        return Ok(user);
     }
 
     [HttpDelete]

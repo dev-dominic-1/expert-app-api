@@ -24,7 +24,9 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
         callDetails.HasOne(e => e.Call).WithOne(e => e.CallDetails).OnDelete(DeleteBehavior.Cascade);
 
         EntityTypeBuilder<User> user = modelBuilder.Entity<User>();
-        user.Property(e => e.Password);
+        user.HasOne(e => e.PhotoUrl).WithOne(e => e.User).OnDelete(DeleteBehavior.Cascade);
+
+
     }
 
     // EXPERT DATA
@@ -38,4 +40,5 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
     
     // USER DATA
     public DbSet<User> User { get; set; }
+    public DbSet<UserPhotoUrl> UserPhotoUrl { get; set; }
 }

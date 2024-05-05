@@ -14,4 +14,6 @@ public class User
     [MaxLength(32)] public string Username { get; set; } = "";
 
     [MaxLength(256)] public string Password { get; set; } = "";
+    
+    public UserPhotoUrl? PhotoUrl { get; set; }
 }
