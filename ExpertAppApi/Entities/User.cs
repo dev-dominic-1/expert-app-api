@@ -16,4 +16,7 @@ public class User
     [MaxLength(256)] public string Password { get; set; } = "";
     
     public UserPhotoUrl? PhotoUrl { get; set; }
+
+    [JsonIgnore]
+    public IEnumerable<Call>? Calls { get; } = null;
 }

@@ -7,7 +7,7 @@ namespace ExpertAppApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class CallController(DataContext context)
+public class CallController(DataContext context) : ControllerBase
 {
     private IQueryable<Call> PrimeGetRequestQuery(bool includeCallDetails, bool includeExpert)
     {
@@ -39,5 +39,36 @@ public class CallController(DataContext context)
     {
         var temp = PrimeGetRequestQuery(true, false);
         return await temp.Where(e => e.ExpertId == expertId).ToListAsync();
+    }
+
+    [HttpGet, Route("GetUpcomingCalls")]
+    public async Task<IActionResult> GetUpcomingCalls([FromQuery] int? userId, [FromQuery] bool? showMore, [FromQuery] bool? getAll)
+    {
+        try
+        {
+            string now = DateTime.Now.ToString("yyyy`-`MM`-`dd` `HH`:`mm`:`ss");
+            var initialData = context.Call
+                .FromSql(
+                    $"SELECT * FROM dbo.call WHERE EXISTS(SELECT 1 FROM dbo.call_details cd WHERE CONCAT_WS(' ', cd.Date, cd.Time) > {now})"
+                ).Select(e => e.Id);
+            if (userId is null || getAll != true)
+            {
+                initialData = initialData.Take(showMore == true ? 30 : 10);
+            }
+            List<int> results = initialData.ToList();
+            
+            // NO RESULTS CASE
+            if (results.Count == 0) return Ok(new Call[] {});
+            
+            // STANDARD CASES
+            var query = PrimeGetRequestQuery(true, true).Where(e => results.Contains(e.Id));
+            if (userId is null) return Ok(await query.ToListAsync());
+            return Ok(await query.Where(e => e.UserId == userId).ToListAsync());
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
+        
     }
 }

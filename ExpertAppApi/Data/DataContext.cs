@@ -17,6 +17,7 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
 
         EntityTypeBuilder<Call> call = modelBuilder.Entity<Call>();
         call.HasOne(e => e.Expert).WithMany(e => e.Calls).OnDelete(DeleteBehavior.Cascade);
+        call.HasOne(e => e.User).WithMany(e => e.Calls).OnDelete(DeleteBehavior.Cascade);
 
         EntityTypeBuilder<CallDetails> callDetails = modelBuilder.Entity<CallDetails>();
         callDetails.HasOne(e => e.Call).WithOne(e => e.CallDetails).OnDelete(DeleteBehavior.Cascade);
