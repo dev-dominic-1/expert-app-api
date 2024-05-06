@@ -1,6 +1,4 @@
 ﻿using ExpertAppApi.Entities;
-using ExpertAppApi.Entities.Call;
-using ExpertAppApi.Entities.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -25,8 +23,6 @@ public class DataContext(DbContextOptions<DataContext> options) : DbContext(opti
 
         EntityTypeBuilder<User> user = modelBuilder.Entity<User>();
         user.HasOne(e => e.PhotoUrl).WithOne(e => e.User).OnDelete(DeleteBehavior.Cascade);
-
-
     }
 
     // EXPERT DATA

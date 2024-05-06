@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using ExpertAppApi.Data;
-using ExpertAppApi.Entities.User;
 using ExpertAppApi.Utilities;
+using ExpertAppApi.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

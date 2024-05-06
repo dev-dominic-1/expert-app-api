@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
-namespace ExpertAppApi.Entities.User;
+namespace ExpertAppApi.Entities;
 
 [Table("app_user_photo_url")]
 public class UserPhotoUrl

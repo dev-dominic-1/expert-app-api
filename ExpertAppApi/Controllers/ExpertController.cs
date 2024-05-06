@@ -7,7 +7,7 @@ namespace ExpertAppApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class ExpertController(DataContext context)
+public class ExpertController(DataContext context) : ControllerBase
 {
     private IQueryable<Expert> PrimeGetRequestQuery(bool includePhotoUrl, bool includeFees)
     {
@@ -29,5 +29,20 @@ public class ExpertController(DataContext context)
     {
         var temp = PrimeGetRequestQuery(includePhotoUrl, includeFees);
         return await temp.Where(e => e.Id == id).FirstAsync();
+    }
+    
+    [HttpPost, Route("Register")]
+    public async Task<ActionResult<Expert?>> Register([FromBody] Expert expert)
+    {
+        context.Expert.Add(expert);
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
+        return Ok(expert);
     }
 }

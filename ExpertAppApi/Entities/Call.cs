@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ExpertAppApi.Entities.Call;
+namespace ExpertAppApi.Entities;
 
 [Table("call")]
 public class Call

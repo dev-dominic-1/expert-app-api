@@ -21,6 +21,6 @@ public class Expert
     /// Here for 1-way binding purposes. Query this data from <i>CallController.GetByExpertId</i>
     /// </summary>
     [JsonIgnore]
-    public IEnumerable<Call.Call>? Calls { get; } = null;
+    public IEnumerable<Call>? Calls { get; } = null;
 
 }

@@ -5,8 +5,20 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// <b>NOTE</b>: WHITELIST FOR CORS:
-//   https://web-host-expert-app.netlify.app/
+// WHITELIST FOR CORS
+var corsOrigins = "_CorsOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: corsOrigins, policy =>
+    {
+        policy.WithOrigins(
+                "http://localhost:8081", 
+                "https://web-host-expert-app.netlify.app"
+            )
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
 
 // Add services to the container.
 
@@ -51,8 +63,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
 
-app.UseAuthorization();
+app.UseCors(corsOrigins);
+
+// app.UseAuthorization();
 
 app.MapControllers();
 

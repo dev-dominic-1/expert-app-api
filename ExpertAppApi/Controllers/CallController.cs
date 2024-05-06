@@ -1,6 +1,5 @@
 ﻿using ExpertAppApi.Data;
-using ExpertAppApi.Entities.Call;
-using Microsoft.AspNetCore.Http.HttpResults;
+using ExpertAppApi.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

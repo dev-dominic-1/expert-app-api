@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
-namespace ExpertAppApi.Entities.Call;
+namespace ExpertAppApi.Entities;
 
 [Table("call_details")]
 public class CallDetails
