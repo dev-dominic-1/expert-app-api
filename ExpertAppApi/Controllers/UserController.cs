@@ -32,7 +32,7 @@ public class UserController(DataContext context, EncryptionService encrypt) : Co
         var temp = PrimeGetRequestQuery(includePhotoUrl);
         var result = await temp.Where(e => e.Id == id).FirstOrDefaultAsync();
         if (result == null) return NotFound("No User entry found with Id=" + id);
-        return Ok(temp);
+        return Ok(result);
     }
 
     [HttpPost, Route("Login")]
