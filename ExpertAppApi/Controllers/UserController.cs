@@ -53,17 +53,12 @@ public class UserController(DataContext context, EncryptionService encrypt) : Co
     [HttpPost, Route("Register")]
     public async Task<IActionResult> AddUser([FromBody] User user)
     {
-        var newUser = new User()
-        {
-            Name = user.Name,
-            Username = user.Username,
-            Password = encrypt.Encrypt(user.Password)
-        };
+        user.Password = encrypt.Encrypt(user.Password);
         try
         {
-            context.User.Add(newUser);
+            context.User.Add(user);
             await context.SaveChangesAsync();
-            return Ok(newUser);
+            return Ok(user);
         }
         catch (Exception e)
         {

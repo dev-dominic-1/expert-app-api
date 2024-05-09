@@ -16804,8 +16804,8 @@
     </schema>
     <schema id="5580" parent="5543" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-05-06.16:52:47.260</IntrospectionTimestamp>
-      <LastIntrospectionLocalTimestamp>2024-05-06.21:52:48</LastIntrospectionLocalTimestamp>
+      <IntrospectionTimestamp>2024-05-09.15:50:04.140</IntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-09.20:50:04</LastIntrospectionLocalTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5581" parent="5543" name="guest">
@@ -16815,28 +16815,28 @@
       <ObjectId>4</ObjectId>
     </schema>
     <table id="5583" parent="5580" name="app_user">
-      <CreatedTimestamp>2024-05-03.11:56:20.453</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-06.16:52:46.433</ModifiedTimestamp>
-      <ObjectId>338100245</ObjectId>
+      <CreatedTimestamp>2024-05-09.15:49:25.547</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <ObjectId>1954106002</ObjectId>
     </table>
     <table id="5584" parent="5580" name="app_user_photo_url">
-      <CreatedTimestamp>2024-05-03.19:32:46.810</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-03.19:32:46.810</ModifiedTimestamp>
-      <ObjectId>402100473</ObjectId>
+      <CreatedTimestamp>2024-05-09.15:49:30.460</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:30.460</ModifiedTimestamp>
+      <ObjectId>2018106230</ObjectId>
     </table>
     <table id="5585" parent="5580" name="call">
-      <CreatedTimestamp>2024-05-01.18:16:56.713</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-06.16:52:46.433</ModifiedTimestamp>
-      <ObjectId>1845581613</ObjectId>
+      <CreatedTimestamp>2024-05-09.15:49:38.410</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
+      <ObjectId>2114106572</ObjectId>
     </table>
     <table id="5586" parent="5580" name="call_details">
-      <CreatedTimestamp>2024-05-01.18:22:44.710</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
-      <ObjectId>1925581898</ObjectId>
+      <CreatedTimestamp>2024-05-09.15:49:42.630</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
+      <ObjectId>78623323</ObjectId>
     </table>
     <table id="5587" parent="5580" name="expert">
       <CreatedTimestamp>2024-05-01.09:57:33.147</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-01.18:16:56.720</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:38.410</ModifiedTimestamp>
       <ObjectId>1525580473</ObjectId>
     </table>
     <table id="5588" parent="5580" name="expert_fees">
@@ -16849,37 +16849,52 @@
       <ModifiedTimestamp>2024-05-01.11:20:43.767</ModifiedTimestamp>
       <ObjectId>1621580815</ObjectId>
     </table>
-    <column id="5590" parent="5583" name="Id">
+    <table id="5590" parent="5580" name="group_call">
+      <CreatedTimestamp>2024-05-09.14:46:42.327</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <ObjectId>1298103665</ObjectId>
+    </table>
+    <table id="5591" parent="5580" name="group_call_details">
+      <CreatedTimestamp>2024-05-09.14:46:48.893</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.14:46:48.893</ModifiedTimestamp>
+      <ObjectId>1378103950</ObjectId>
+    </table>
+    <table id="5592" parent="5580" name="group_call_registration">
+      <CreatedTimestamp>2024-05-09.15:49:53.340</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:53.340</ModifiedTimestamp>
+      <ObjectId>206623779</ObjectId>
+    </table>
+    <column id="5593" parent="5583" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(7)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5591" parent="5583" name="Name">
+    <column id="5594" parent="5583" name="Name">
       <DasType>varchar(64 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <DefaultConstraintId>386100416</DefaultConstraintId>
-      <DefaultConstraintName>DF__app_user__Name__17036CC0</DefaultConstraintName>
+      <DefaultConstraintId>2002106173</DefaultConstraintId>
+      <DefaultConstraintName>DF__app_user__Name__7755B73D</DefaultConstraintName>
     </column>
-    <column id="5592" parent="5583" name="Username">
+    <column id="5595" parent="5583" name="Username">
       <DasType>varchar(32 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5593" parent="5583" name="Password">
+    <column id="5596" parent="5583" name="Password">
       <DasType>varchar(128 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <default id="5594" parent="5583" name="DF__app_user__Name__17036CC0">
+    <default id="5597" parent="5583" name="DF__app_user__Name__7755B73D">
       <ColNames>Name</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ModifiedTimestamp>2024-05-03.11:56:20.460</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:25.547</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>386100416</ObjectId>
+      <ObjectId>2002106173</ObjectId>
     </default>
-    <index id="5595" parent="5583" name="PK__app_user__3214EC073EA31B10">
+    <index id="5598" parent="5583" name="PK__app_user__3214EC07DD91BEDF">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -16887,87 +16902,88 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5596" parent="5583" name="UC_Username">
+    <index id="5599" parent="5583" name="UC_Username">
       <ColNames>Username</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5597" parent="5583" name="PK__app_user__3214EC073EA31B10">
-      <CreatedTimestamp>2024-05-03.11:56:20.460</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-03.11:56:20.460</ModifiedTimestamp>
+    <key id="5600" parent="5583" name="PK__app_user__3214EC07DD91BEDF">
+      <CreatedTimestamp>2024-05-09.15:49:25.547</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:25.547</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>354100302</ObjectId>
+      <ObjectId>1970106059</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK__app_user__3214EC073EA31B10</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__app_user__3214EC07DD91BEDF</UnderlyingIndexName>
     </key>
-    <key id="5598" parent="5583" name="UC_Username">
-      <CreatedTimestamp>2024-05-03.11:56:20.460</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-03.11:56:20.460</ModifiedTimestamp>
-      <ObjectId>370100359</ObjectId>
+    <key id="5601" parent="5583" name="UC_Username">
+      <CreatedTimestamp>2024-05-09.15:49:25.547</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:25.547</ModifiedTimestamp>
+      <ObjectId>1986106116</ObjectId>
       <UnderlyingIndexName>UC_Username</UnderlyingIndexName>
     </key>
-    <column id="5599" parent="5584" name="Id">
+    <column id="5602" parent="5584" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(3)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5600" parent="5584" name="UserId">
+    <column id="5603" parent="5584" name="UserId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5601" parent="5584" name="Small">
+    <column id="5604" parent="5584" name="Small">
       <DasType>varchar(512 char)|0s</DasType>
       <Position>3</Position>
-      <DefaultConstraintId>434100587</DefaultConstraintId>
-      <DefaultConstraintName>DF__app_user___Small__19DFD96B</DefaultConstraintName>
+      <DefaultConstraintId>2050106344</DefaultConstraintId>
+      <DefaultConstraintName>DF__app_user___Small__7A3223E8</DefaultConstraintName>
     </column>
-    <column id="5602" parent="5584" name="Medium">
+    <column id="5605" parent="5584" name="Medium">
       <DasType>varchar(512 char)|0s</DasType>
       <Position>4</Position>
-      <DefaultConstraintId>450100644</DefaultConstraintId>
-      <DefaultConstraintName>DF__app_user___Mediu__1AD3FDA4</DefaultConstraintName>
+      <DefaultConstraintId>2066106401</DefaultConstraintId>
+      <DefaultConstraintName>DF__app_user___Mediu__7B264821</DefaultConstraintName>
     </column>
-    <column id="5603" parent="5584" name="Large">
+    <column id="5606" parent="5584" name="Large">
       <DasType>varchar(512 char)|0s</DasType>
       <Position>5</Position>
-      <DefaultConstraintId>466100701</DefaultConstraintId>
-      <DefaultConstraintName>DF__app_user___Large__1BC821DD</DefaultConstraintName>
+      <DefaultConstraintId>2082106458</DefaultConstraintId>
+      <DefaultConstraintName>DF__app_user___Large__7C1A6C5A</DefaultConstraintName>
     </column>
-    <default id="5604" parent="5584" name="DF__app_user___Small__19DFD96B">
+    <default id="5607" parent="5584" name="DF__app_user___Small__7A3223E8">
       <ColNames>Small</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ModifiedTimestamp>2024-05-03.19:32:46.873</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:30.463</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>434100587</ObjectId>
+      <ObjectId>2050106344</ObjectId>
     </default>
-    <default id="5605" parent="5584" name="DF__app_user___Mediu__1AD3FDA4">
+    <default id="5608" parent="5584" name="DF__app_user___Mediu__7B264821">
       <ColNames>Medium</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ModifiedTimestamp>2024-05-03.19:32:46.873</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:30.463</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>450100644</ObjectId>
+      <ObjectId>2066106401</ObjectId>
     </default>
-    <default id="5606" parent="5584" name="DF__app_user___Large__1BC821DD">
+    <default id="5609" parent="5584" name="DF__app_user___Large__7C1A6C5A">
       <ColNames>Large</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ModifiedTimestamp>2024-05-03.19:32:46.877</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:30.463</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>466100701</ObjectId>
+      <ObjectId>2082106458</ObjectId>
     </default>
-    <foreign-key id="5607" parent="5584" name="FK__app_user___UserI__1CBC4616">
+    <foreign-key id="5610" parent="5584" name="FK__app_user___UserI__7D0E9093">
       <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2024-05-03.19:32:46.877</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-03.19:32:46.877</ModifiedTimestamp>
+      <CreatedTimestamp>2024-05-09.15:49:30.463</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:30.463</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>482100758</ObjectId>
+      <ObjectId>2098106515</ObjectId>
+      <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>338100245</RefTableId>
+      <RefTableId>1954106002</RefTableId>
       <RefTableName>app_user</RefTableName>
     </foreign-key>
-    <index id="5608" parent="5584" name="PK__app_user__3214EC0753189107">
+    <index id="5611" parent="5584" name="PK__app_user__3214EC078DE491CA">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -16975,86 +16991,89 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5609" parent="5584" name="PK__app_user__3214EC0753189107">
-      <CreatedTimestamp>2024-05-03.19:32:46.870</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-03.19:32:46.870</ModifiedTimestamp>
+    <key id="5612" parent="5584" name="PK__app_user__3214EC078DE491CA">
+      <CreatedTimestamp>2024-05-09.15:49:30.463</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:30.463</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>418100530</ObjectId>
+      <ObjectId>2034106287</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK__app_user__3214EC0753189107</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__app_user__3214EC078DE491CA</UnderlyingIndexName>
     </key>
-    <column id="5610" parent="5585" name="Id">
+    <column id="5613" parent="5585" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5611" parent="5585" name="ExpertId">
+    <column id="5614" parent="5585" name="ExpertId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5612" parent="5585" name="Title">
+    <column id="5615" parent="5585" name="Title">
       <DasType>varchar(64 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <DefaultConstraintId>1877581727</DefaultConstraintId>
-      <DefaultConstraintName>DF__call__Title__6FE99F9F</DefaultConstraintName>
+      <DefaultConstraintId>2146106686</DefaultConstraintId>
+      <DefaultConstraintName>DF__call__Title__7FEAFD3E</DefaultConstraintName>
     </column>
-    <column id="5613" parent="5585" name="adImageUrl">
+    <column id="5616" parent="5585" name="adImageUrl">
       <DasType>varchar(512 char)|0s</DasType>
       <Position>4</Position>
-      <DefaultConstraintId>1893581784</DefaultConstraintId>
-      <DefaultConstraintName>DF__call__adImageUrl__70DDC3D8</DefaultConstraintName>
+      <DefaultConstraintId>14623095</DefaultConstraintId>
+      <DefaultConstraintName>DF__call__adImageUrl__00DF2177</DefaultConstraintName>
     </column>
-    <column id="5614" parent="5585" name="UserId">
+    <column id="5617" parent="5585" name="UserId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
-      <Position>6</Position>
-      <DefaultConstraintId>690101499</DefaultConstraintId>
-      <DefaultConstraintName>DF__call__UserId__29221CFB</DefaultConstraintName>
+      <Position>5</Position>
+      <DefaultConstraintId>30623152</DefaultConstraintId>
+      <DefaultConstraintName>DF__call__UserId__01D345B0</DefaultConstraintName>
     </column>
-    <default id="5615" parent="5585" name="DF__call__Title__6FE99F9F">
+    <default id="5618" parent="5585" name="DF__call__Title__7FEAFD3E">
       <ColNames>Title</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ModifiedTimestamp>2024-05-01.18:16:56.720</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:38.410</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1877581727</ObjectId>
+      <ObjectId>2146106686</ObjectId>
     </default>
-    <default id="5616" parent="5585" name="DF__call__adImageUrl__70DDC3D8">
+    <default id="5619" parent="5585" name="DF__call__adImageUrl__00DF2177">
       <ColNames>adImageUrl</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ModifiedTimestamp>2024-05-01.18:16:56.720</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:38.410</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1893581784</ObjectId>
+      <ObjectId>14623095</ObjectId>
     </default>
-    <default id="5617" parent="5585" name="DF__call__UserId__29221CFB">
+    <default id="5620" parent="5585" name="DF__call__UserId__01D345B0">
       <ColNames>UserId</ColNames>
       <DefaultExpression>0</DefaultExpression>
-      <ModifiedTimestamp>2024-05-06.16:50:11.530</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:38.410</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>690101499</ObjectId>
+      <ObjectId>30623152</ObjectId>
     </default>
-    <foreign-key id="5618" parent="5585" name="FK__call__ExpertId__71D1E811">
+    <foreign-key id="5621" parent="5585" name="FK__call__ExpertId__03BB8E22">
       <ColNames>ExpertId</ColNames>
-      <CreatedTimestamp>2024-05-01.18:16:56.720</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-01.18:16:56.720</ModifiedTimestamp>
+      <CreatedTimestamp>2024-05-09.15:49:38.410</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:38.410</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1909581841</ObjectId>
+      <ObjectId>62623266</ObjectId>
+      <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableId>1525580473</RefTableId>
       <RefTableName>expert</RefTableName>
     </foreign-key>
-    <foreign-key id="5619" parent="5585" name="FK__Call_UserId__AppUser_Id">
+    <foreign-key id="5622" parent="5585" name="FK__call__UserId__02C769E9">
       <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2024-05-06.16:52:46.433</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-06.16:52:46.433</ModifiedTimestamp>
-      <ObjectId>706101556</ObjectId>
+      <CreatedTimestamp>2024-05-09.15:49:38.410</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:38.410</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>46623209</ObjectId>
+      <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>338100245</RefTableId>
+      <RefTableId>1954106002</RefTableId>
       <RefTableName>app_user</RefTableName>
     </foreign-key>
-    <index id="5620" parent="5585" name="PK__call__3214EC071DC48DCD">
+    <index id="5623" parent="5585" name="PK__call__3214EC07342B405A">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17062,111 +17081,112 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5621" parent="5585" name="PK__call__3214EC071DC48DCD">
-      <CreatedTimestamp>2024-05-01.18:16:56.713</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-01.18:16:56.713</ModifiedTimestamp>
+    <key id="5624" parent="5585" name="PK__call__3214EC07342B405A">
+      <CreatedTimestamp>2024-05-09.15:49:38.410</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:38.410</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1861581670</ObjectId>
+      <ObjectId>2130106629</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK__call__3214EC071DC48DCD</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__call__3214EC07342B405A</UnderlyingIndexName>
     </key>
-    <column id="5622" parent="5586" name="Id">
+    <column id="5625" parent="5586" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5623" parent="5586" name="CallId">
+    <column id="5626" parent="5586" name="CallId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5624" parent="5586" name="Date">
+    <column id="5627" parent="5586" name="Date">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5625" parent="5586" name="Time">
+    <column id="5628" parent="5586" name="Time">
       <DasType>time|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5626" parent="5586" name="QuestionTitle">
+    <column id="5629" parent="5586" name="QuestionTitle">
       <DasType>varchar(64 char)|0s</DasType>
       <Position>5</Position>
-      <DefaultConstraintId>1957582012</DefaultConstraintId>
-      <DefaultConstraintName>DF__call_deta__Quest__74AE54BC</DefaultConstraintName>
+      <DefaultConstraintId>110623437</DefaultConstraintId>
+      <DefaultConstraintName>DF__call_deta__Quest__0697FACD</DefaultConstraintName>
     </column>
-    <column id="5627" parent="5586" name="Question">
+    <column id="5630" parent="5586" name="Question">
       <DasType>varchar(512 char)|0s</DasType>
       <Position>6</Position>
-      <DefaultConstraintId>1973582069</DefaultConstraintId>
-      <DefaultConstraintName>DF__call_deta__Quest__75A278F5</DefaultConstraintName>
+      <DefaultConstraintId>126623494</DefaultConstraintId>
+      <DefaultConstraintName>DF__call_deta__Quest__078C1F06</DefaultConstraintName>
     </column>
-    <column id="5628" parent="5586" name="Rating">
+    <column id="5631" parent="5586" name="Rating">
       <DasType>int|0s</DasType>
       <Position>7</Position>
-      <DefaultConstraintId>1989582126</DefaultConstraintId>
-      <DefaultConstraintName>DF__call_deta__Ratin__76969D2E</DefaultConstraintName>
+      <DefaultConstraintId>142623551</DefaultConstraintId>
+      <DefaultConstraintName>DF__call_deta__Ratin__0880433F</DefaultConstraintName>
     </column>
-    <column id="5629" parent="5586" name="Review">
+    <column id="5632" parent="5586" name="Review">
       <DasType>varchar(512 char)|0s</DasType>
       <Position>8</Position>
-      <DefaultConstraintId>2005582183</DefaultConstraintId>
-      <DefaultConstraintName>DF__call_deta__Revie__778AC167</DefaultConstraintName>
+      <DefaultConstraintId>158623608</DefaultConstraintId>
+      <DefaultConstraintName>DF__call_deta__Revie__09746778</DefaultConstraintName>
     </column>
-    <column id="5630" parent="5586" name="Comment">
+    <column id="5633" parent="5586" name="Comment">
       <DasType>varchar(512 char)|0s</DasType>
       <Position>9</Position>
-      <DefaultConstraintId>2021582240</DefaultConstraintId>
-      <DefaultConstraintName>DF__call_deta__Comme__787EE5A0</DefaultConstraintName>
+      <DefaultConstraintId>174623665</DefaultConstraintId>
+      <DefaultConstraintName>DF__call_deta__Comme__0A688BB1</DefaultConstraintName>
     </column>
-    <default id="5631" parent="5586" name="DF__call_deta__Quest__74AE54BC">
+    <default id="5634" parent="5586" name="DF__call_deta__Quest__0697FACD">
       <ColNames>QuestionTitle</ColNames>
       <DefaultExpression>NULL</DefaultExpression>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1957582012</ObjectId>
+      <ObjectId>110623437</ObjectId>
     </default>
-    <default id="5632" parent="5586" name="DF__call_deta__Quest__75A278F5">
+    <default id="5635" parent="5586" name="DF__call_deta__Quest__078C1F06">
       <ColNames>Question</ColNames>
       <DefaultExpression>NULL</DefaultExpression>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1973582069</ObjectId>
+      <ObjectId>126623494</ObjectId>
     </default>
-    <default id="5633" parent="5586" name="DF__call_deta__Ratin__76969D2E">
+    <default id="5636" parent="5586" name="DF__call_deta__Ratin__0880433F">
       <ColNames>Rating</ColNames>
       <DefaultExpression>NULL</DefaultExpression>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1989582126</ObjectId>
+      <ObjectId>142623551</ObjectId>
     </default>
-    <default id="5634" parent="5586" name="DF__call_deta__Revie__778AC167">
+    <default id="5637" parent="5586" name="DF__call_deta__Revie__09746778">
       <ColNames>Review</ColNames>
       <DefaultExpression>NULL</DefaultExpression>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>2005582183</ObjectId>
+      <ObjectId>158623608</ObjectId>
     </default>
-    <default id="5635" parent="5586" name="DF__call_deta__Comme__787EE5A0">
+    <default id="5638" parent="5586" name="DF__call_deta__Comme__0A688BB1">
       <ColNames>Comment</ColNames>
       <DefaultExpression>NULL</DefaultExpression>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>2021582240</ObjectId>
+      <ObjectId>174623665</ObjectId>
     </default>
-    <foreign-key id="5636" parent="5586" name="FK__call_deta__CallI__797309D9">
+    <foreign-key id="5639" parent="5586" name="FK__call_deta__CallI__0B5CAFEA">
       <ColNames>CallId</ColNames>
-      <CreatedTimestamp>2024-05-01.18:22:44.710</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
+      <CreatedTimestamp>2024-05-09.15:49:42.630</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>2037582297</ObjectId>
+      <ObjectId>190623722</ObjectId>
+      <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>1845581613</RefTableId>
+      <RefTableId>2114106572</RefTableId>
       <RefTableName>call</RefTableName>
     </foreign-key>
-    <index id="5637" parent="5586" name="PK__call_det__3214EC07F775280A">
+    <index id="5640" parent="5586" name="PK__call_det__3214EC07169ACBCB">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17174,49 +17194,49 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5638" parent="5586" name="PK__call_det__3214EC07F775280A">
-      <CreatedTimestamp>2024-05-01.18:22:44.710</CreatedTimestamp>
-      <ModifiedTimestamp>2024-05-01.18:22:44.710</ModifiedTimestamp>
+    <key id="5641" parent="5586" name="PK__call_det__3214EC07169ACBCB">
+      <CreatedTimestamp>2024-05-09.15:49:42.630</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:42.630</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1941581955</ObjectId>
+      <ObjectId>94623380</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK__call_det__3214EC07F775280A</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__call_det__3214EC07169ACBCB</UnderlyingIndexName>
     </key>
-    <column id="5639" parent="5587" name="Id">
+    <column id="5642" parent="5587" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(9)</SequenceIdentity>
     </column>
-    <column id="5640" parent="5587" name="Name">
+    <column id="5643" parent="5587" name="Name">
       <DasType>varchar(64 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <DefaultConstraintId>1573580644</DefaultConstraintId>
       <DefaultConstraintName>DF__expert__Name__5DCAEF64</DefaultConstraintName>
     </column>
-    <column id="5641" parent="5587" name="Bio">
+    <column id="5644" parent="5587" name="Bio">
       <DasType>varchar(64 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <DefaultConstraintId>1589580701</DefaultConstraintId>
       <DefaultConstraintName>DF__expert__Bio__5EBF139D</DefaultConstraintName>
     </column>
-    <default id="5642" parent="5587" name="DF__expert__Name__5DCAEF64">
+    <default id="5645" parent="5587" name="DF__expert__Name__5DCAEF64">
       <ColNames>Name</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2024-05-01.10:18:26.650</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1573580644</ObjectId>
     </default>
-    <default id="5643" parent="5587" name="DF__expert__Bio__5EBF139D">
+    <default id="5646" parent="5587" name="DF__expert__Bio__5EBF139D">
       <ColNames>Bio</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2024-05-01.10:18:26.690</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1589580701</ObjectId>
     </default>
-    <index id="5644" parent="5587" name="PK__expert__3214EC07D31559F2">
+    <index id="5647" parent="5587" name="PK__expert__3214EC07D31559F2">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17224,7 +17244,7 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5645" parent="5587" name="PK__expert__3214EC07D31559F2">
+    <key id="5648" parent="5587" name="PK__expert__3214EC07D31559F2">
       <CreatedTimestamp>2024-05-01.09:57:33.200</CreatedTimestamp>
       <ModifiedTimestamp>2024-05-01.09:57:33.200</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17232,31 +17252,31 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__expert__3214EC07D31559F2</UnderlyingIndexName>
     </key>
-    <column id="5646" parent="5588" name="Id">
+    <column id="5649" parent="5588" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(8)</SequenceIdentity>
     </column>
-    <column id="5647" parent="5588" name="ExpertId">
+    <column id="5650" parent="5588" name="ExpertId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5648" parent="5588" name="FollowUpQuestion">
+    <column id="5651" parent="5588" name="FollowUpQuestion">
       <DasType>float|0s</DasType>
       <Position>3</Position>
       <DefaultConstraintId>1749581271</DefaultConstraintId>
       <DefaultConstraintName>DF__expert_fe__Follo__68487DD7</DefaultConstraintName>
     </column>
-    <default id="5649" parent="5588" name="DF__expert_fe__Follo__68487DD7">
+    <default id="5652" parent="5588" name="DF__expert_fe__Follo__68487DD7">
       <ColNames>FollowUpQuestion</ColNames>
       <DefaultExpression>0.0</DefaultExpression>
       <ModifiedTimestamp>2024-05-01.10:37:24.420</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1749581271</ObjectId>
     </default>
-    <foreign-key id="5650" parent="5588" name="FK__ExpertFees_ExpertId__Expert_Id">
+    <foreign-key id="5653" parent="5588" name="FK__ExpertFees_ExpertId__Expert_Id">
       <ColNames>ExpertId</ColNames>
       <CreatedTimestamp>2024-05-01.10:37:24.420</CreatedTimestamp>
       <ModifiedTimestamp>2024-05-01.11:23:28.580</ModifiedTimestamp>
@@ -17265,7 +17285,7 @@
       <RefTableId>1525580473</RefTableId>
       <RefTableName>expert</RefTableName>
     </foreign-key>
-    <index id="5651" parent="5588" name="PK__expert_f__3214EC07D254843F">
+    <index id="5654" parent="5588" name="PK__expert_f__3214EC07D254843F">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17273,7 +17293,7 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5652" parent="5588" name="PK__expert_f__3214EC07D254843F">
+    <key id="5655" parent="5588" name="PK__expert_f__3214EC07D254843F">
       <CreatedTimestamp>2024-05-01.10:37:24.420</CreatedTimestamp>
       <ModifiedTimestamp>2024-05-01.10:37:24.420</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17281,60 +17301,60 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__expert_f__3214EC07D254843F</UnderlyingIndexName>
     </key>
-    <column id="5653" parent="5589" name="Id">
+    <column id="5656" parent="5589" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(9)</SequenceIdentity>
     </column>
-    <column id="5654" parent="5589" name="ExpertId">
+    <column id="5657" parent="5589" name="ExpertId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5655" parent="5589" name="Small">
+    <column id="5658" parent="5589" name="Small">
       <DasType>varchar(512 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <DefaultConstraintId>1653580929</DefaultConstraintId>
       <DefaultConstraintName>DF__expert_ph__Small__628FA481</DefaultConstraintName>
     </column>
-    <column id="5656" parent="5589" name="Medium">
+    <column id="5659" parent="5589" name="Medium">
       <DasType>varchar(512 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <DefaultConstraintId>1669580986</DefaultConstraintId>
       <DefaultConstraintName>DF__expert_ph__Mediu__6383C8BA</DefaultConstraintName>
     </column>
-    <column id="5657" parent="5589" name="Large">
+    <column id="5660" parent="5589" name="Large">
       <DasType>varchar(512 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <DefaultConstraintId>1685581043</DefaultConstraintId>
       <DefaultConstraintName>DF__expert_ph__Large__6477ECF3</DefaultConstraintName>
     </column>
-    <default id="5658" parent="5589" name="DF__expert_ph__Small__628FA481">
+    <default id="5661" parent="5589" name="DF__expert_ph__Small__628FA481">
       <ColNames>Small</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2024-05-01.10:34:26.623</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1653580929</ObjectId>
     </default>
-    <default id="5659" parent="5589" name="DF__expert_ph__Mediu__6383C8BA">
+    <default id="5662" parent="5589" name="DF__expert_ph__Mediu__6383C8BA">
       <ColNames>Medium</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2024-05-01.10:34:26.623</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1669580986</ObjectId>
     </default>
-    <default id="5660" parent="5589" name="DF__expert_ph__Large__6477ECF3">
+    <default id="5663" parent="5589" name="DF__expert_ph__Large__6477ECF3">
       <ColNames>Large</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2024-05-01.10:34:26.623</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1685581043</ObjectId>
     </default>
-    <foreign-key id="5661" parent="5589" name="FK__ExpertPhotoUrl_ExpertId__Expert_Id">
+    <foreign-key id="5664" parent="5589" name="FK__ExpertPhotoUrl_ExpertId__Expert_Id">
       <ColNames>ExpertId</ColNames>
       <CreatedTimestamp>2024-05-01.10:34:26.623</CreatedTimestamp>
       <ModifiedTimestamp>2024-05-01.11:20:43.763</ModifiedTimestamp>
@@ -17343,7 +17363,7 @@
       <RefTableId>1525580473</RefTableId>
       <RefTableName>expert</RefTableName>
     </foreign-key>
-    <index id="5662" parent="5589" name="PK__expert_p__3214EC07E35769A4">
+    <index id="5665" parent="5589" name="PK__expert_p__3214EC07E35769A4">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -17351,7 +17371,7 @@
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5663" parent="5589" name="PK__expert_p__3214EC07E35769A4">
+    <key id="5666" parent="5589" name="PK__expert_p__3214EC07E35769A4">
       <CreatedTimestamp>2024-05-01.10:34:26.623</CreatedTimestamp>
       <ModifiedTimestamp>2024-05-01.10:34:26.623</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17359,36 +17379,308 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__expert_p__3214EC07E35769A4</UnderlyingIndexName>
     </key>
-    <partition id="5664" parent="5595">
-      <ObjectId>72057594046709760</ObjectId>
+    <column id="5667" parent="5590" name="Id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(4)</SequenceIdentity>
+    </column>
+    <column id="5668" parent="5590" name="ExpertId">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="5669" parent="5590" name="Title">
+      <DasType>varchar(64 char)|0s</DasType>
+      <Position>3</Position>
+      <DefaultConstraintId>1330103779</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__Title__4F47C5E3</DefaultConstraintName>
+    </column>
+    <column id="5670" parent="5590" name="AdImageUrl">
+      <DasType>varchar(512 char)|0s</DasType>
+      <Position>4</Position>
+      <DefaultConstraintId>1346103836</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__AdIma__503BEA1C</DefaultConstraintName>
+    </column>
+    <default id="5671" parent="5590" name="DF__group_cal__Title__4F47C5E3">
+      <ColNames>Title</ColNames>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.14:46:42.327</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1330103779</ObjectId>
+    </default>
+    <default id="5672" parent="5590" name="DF__group_cal__AdIma__503BEA1C">
+      <ColNames>AdImageUrl</ColNames>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.14:46:42.327</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1346103836</ObjectId>
+    </default>
+    <foreign-key id="5673" parent="5590" name="FK__group_cal__Exper__51300E55">
+      <ColNames>ExpertId</ColNames>
+      <CreatedTimestamp>2024-05-09.14:46:42.327</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.14:46:42.327</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1362103893</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1525580473</RefTableId>
+      <RefTableName>expert</RefTableName>
+    </foreign-key>
+    <index id="5674" parent="5590" name="PK__group_ca__3214EC07289A1D63">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5675" parent="5590" name="PK__group_ca__3214EC07289A1D63">
+      <CreatedTimestamp>2024-05-09.14:46:42.327</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.14:46:42.327</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1314103722</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__group_ca__3214EC07289A1D63</UnderlyingIndexName>
+    </key>
+    <column id="5676" parent="5591" name="Id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(4)</SequenceIdentity>
+    </column>
+    <column id="5677" parent="5591" name="GroupCallId">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="5678" parent="5591" name="Description">
+      <DasType>varchar(512 char)|0s</DasType>
+      <Position>3</Position>
+      <DefaultConstraintId>1410104064</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__Descr__540C7B00</DefaultConstraintName>
+    </column>
+    <column id="5679" parent="5591" name="Date">
+      <DasType>date|0s</DasType>
+      <Position>4</Position>
+      <DefaultConstraintId>1426104121</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_call__Date__55009F39</DefaultConstraintName>
+    </column>
+    <column id="5680" parent="5591" name="Time">
+      <DasType>time|0s</DasType>
+      <Position>5</Position>
+      <DefaultConstraintId>1442104178</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_call__Time__55F4C372</DefaultConstraintName>
+    </column>
+    <column id="5681" parent="5591" name="Canceled">
+      <DasType>bit|0s</DasType>
+      <Position>6</Position>
+      <DefaultConstraintId>1458104235</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__Cance__56E8E7AB</DefaultConstraintName>
+    </column>
+    <column id="5682" parent="5591" name="Postponed">
+      <DasType>bit|0s</DasType>
+      <Position>7</Position>
+      <DefaultConstraintId>1474104292</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__Postp__57DD0BE4</DefaultConstraintName>
+    </column>
+    <default id="5683" parent="5591" name="DF__group_cal__Descr__540C7B00">
+      <ColNames>Description</ColNames>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.14:46:48.897</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1410104064</ObjectId>
+    </default>
+    <default id="5684" parent="5591" name="DF__group_call__Date__55009F39">
+      <ColNames>Date</ColNames>
+      <DefaultExpression>NULL</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.14:46:48.897</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1426104121</ObjectId>
+    </default>
+    <default id="5685" parent="5591" name="DF__group_call__Time__55F4C372">
+      <ColNames>Time</ColNames>
+      <DefaultExpression>NULL</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.14:46:48.897</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1442104178</ObjectId>
+    </default>
+    <default id="5686" parent="5591" name="DF__group_cal__Cance__56E8E7AB">
+      <ColNames>Canceled</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.14:46:48.897</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1458104235</ObjectId>
+    </default>
+    <default id="5687" parent="5591" name="DF__group_cal__Postp__57DD0BE4">
+      <ColNames>Postponed</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.14:46:48.897</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1474104292</ObjectId>
+    </default>
+    <foreign-key id="5688" parent="5591" name="FK__group_cal__Group__58D1301D">
+      <ColNames>GroupCallId</ColNames>
+      <CreatedTimestamp>2024-05-09.14:46:48.897</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.14:46:48.897</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1490104349</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1298103665</RefTableId>
+      <RefTableName>group_call</RefTableName>
+    </foreign-key>
+    <index id="5689" parent="5591" name="PK__group_ca__3214EC078AEC9E8D">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5690" parent="5591" name="PK__group_ca__3214EC078AEC9E8D">
+      <CreatedTimestamp>2024-05-09.14:46:48.897</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.14:46:48.897</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1394104007</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__group_ca__3214EC078AEC9E8D</UnderlyingIndexName>
+    </key>
+    <column id="5691" parent="5592" name="Id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="5692" parent="5592" name="GroupCallId">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="5693" parent="5592" name="UserId">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="5694" parent="5592" name="RegistrationDate">
+      <DasType>date|0s</DasType>
+      <Position>4</Position>
+      <DefaultConstraintId>238623893</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__Regis__0E391C95</DefaultConstraintName>
+    </column>
+    <column id="5695" parent="5592" name="RegistrationTime">
+      <DasType>time|0s</DasType>
+      <Position>5</Position>
+      <DefaultConstraintId>254623950</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__Regis__0F2D40CE</DefaultConstraintName>
+    </column>
+    <column id="5696" parent="5592" name="Canceled">
+      <DasType>bit|0s</DasType>
+      <Position>6</Position>
+      <DefaultConstraintId>270624007</DefaultConstraintId>
+      <DefaultConstraintName>DF__group_cal__Cance__10216507</DefaultConstraintName>
+    </column>
+    <default id="5697" parent="5592" name="DF__group_cal__Regis__0E391C95">
+      <ColNames>RegistrationDate</ColNames>
+      <DefaultExpression>NULL</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>238623893</ObjectId>
+    </default>
+    <default id="5698" parent="5592" name="DF__group_cal__Regis__0F2D40CE">
+      <ColNames>RegistrationTime</ColNames>
+      <DefaultExpression>NULL</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>254623950</ObjectId>
+    </default>
+    <default id="5699" parent="5592" name="DF__group_cal__Cance__10216507">
+      <ColNames>Canceled</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>270624007</ObjectId>
+    </default>
+    <foreign-key id="5700" parent="5592" name="FK__group_cal__Group__11158940">
+      <ColNames>GroupCallId</ColNames>
+      <CreatedTimestamp>2024-05-09.15:49:53.343</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>286624064</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1298103665</RefTableId>
+      <RefTableName>group_call</RefTableName>
+    </foreign-key>
+    <foreign-key id="5701" parent="5592" name="FK__group_cal__UserI__1209AD79">
+      <ColNames>UserId</ColNames>
+      <CreatedTimestamp>2024-05-09.15:49:53.343</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>302624121</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1954106002</RefTableId>
+      <RefTableName>app_user</RefTableName>
+    </foreign-key>
+    <index id="5702" parent="5592" name="PK__group_ca__3214EC079D5C668A">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5703" parent="5592" name="PK__group_ca__3214EC079D5C668A">
+      <CreatedTimestamp>2024-05-09.15:49:53.343</CreatedTimestamp>
+      <ModifiedTimestamp>2024-05-09.15:49:53.343</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>222623836</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__group_ca__3214EC079D5C668A</UnderlyingIndexName>
+    </key>
+    <partition id="5704" parent="5598">
+      <ObjectId>72057594047496192</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5665" parent="5596">
-      <ObjectId>72057594046775296</ObjectId>
+    <partition id="5705" parent="5599">
+      <ObjectId>72057594047561728</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5666" parent="5608">
-      <ObjectId>72057594046840832</ObjectId>
+    <partition id="5706" parent="5611">
+      <ObjectId>72057594047627264</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5667" parent="5620">
-      <ObjectId>72057594046513152</ObjectId>
+    <partition id="5707" parent="5623">
+      <ObjectId>72057594047692800</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5668" parent="5637">
-      <ObjectId>72057594046578688</ObjectId>
+    <partition id="5708" parent="5640">
+      <ObjectId>72057594047758336</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5669" parent="5644">
+    <partition id="5709" parent="5647">
       <ObjectId>72057594046251008</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5670" parent="5651">
+    <partition id="5710" parent="5654">
       <ObjectId>72057594046382080</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5671" parent="5662">
+    <partition id="5711" parent="5665">
       <ObjectId>72057594046316544</ObjectId>
+      <Position>1</Position>
+    </partition>
+    <partition id="5712" parent="5674">
+      <ObjectId>72057594047102976</ObjectId>
+      <Position>1</Position>
+    </partition>
+    <partition id="5713" parent="5689">
+      <ObjectId>72057594047168512</ObjectId>
+      <Position>1</Position>
+    </partition>
+    <partition id="5714" parent="5702">
+      <ObjectId>72057594047823872</ObjectId>
       <Position>1</Position>
     </partition>
   </database-model>

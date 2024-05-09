@@ -19,4 +19,6 @@ public class User
 
     [JsonIgnore]
     public IEnumerable<Call>? Calls { get; } = null;
+
+    [JsonIgnore] public IEnumerable<GroupCallRegistration>? GroupCallRegistrations { get; } = null;
 }

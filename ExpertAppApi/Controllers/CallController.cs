@@ -69,6 +69,20 @@ public class CallController(DataContext context) : ControllerBase
         {
             return Problem(e.Message);
         }
-        
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AddCall([FromBody] Call data)
+    {
+        context.Call.Add(data);
+        try
+        {
+            await context.SaveChangesAsync();
+            return Ok(data);
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
     }
 }

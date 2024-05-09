@@ -5,35 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40d0d4c0-d40b-4f57-966e-ab54df7f0952" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/PublishOutputs.9ff821aa9f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpertAppApi/Controllers/GroupCallController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpertAppApi/Entities/GroupCall.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpertAppApi/Entities/GroupCallDetails.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpertAppApi/Entities/GroupCallRegistration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e27b6980-ff4c-4c5a-aa82-f91a8e0bcb1b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e27b6980-ff4c-4c5a-aa82-f91a8e0bcb1b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/Controllers/CallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/Controllers/CallController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpertAppApi/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/Data/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/Data/DataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/Entities/Call.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/Entities/Call.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpertAppApi/Entities/Expert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/Entities/Expert.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/Entities/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/bin/Debug/net8.0/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/bin/Debug/net8.0/ExpertAppApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/bin/Debug/net8.0/ExpertAppApi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/bin/Debug/net8.0/ExpertAppApi.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/bin/Debug/net8.0/ExpertAppApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/bin/Debug/net8.0/ExpertAppApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/bin/Release/net8.0/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/bin/Release/net8.0/ExpertAppApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/bin/Release/net8.0/ExpertAppApi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/bin/Release/net8.0/ExpertAppApi.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/bin/Release/net8.0/ExpertAppApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/bin/Release/net8.0/ExpertAppApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ExpertAppApi.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ref/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/ref/ExpertAppApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/refint/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Debug/net8.0/refint/ExpertAppApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ExpertAppApi.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ref/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/ref/ExpertAppApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/refint/ExpertAppApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ExpertAppApi/obj/Release/net8.0/refint/ExpertAppApi.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +49,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/domin/RiderProjects/expert-app-api&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/domin/RiderProjects/expert-app-api"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;azure&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

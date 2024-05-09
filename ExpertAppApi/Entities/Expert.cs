@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace ExpertAppApi.Entities;
@@ -22,5 +23,7 @@ public class Expert
     /// </summary>
     [JsonIgnore]
     public IEnumerable<Call>? Calls { get; } = null;
+
+    [JsonIgnore] public IEnumerable<GroupCall>? GroupCalls { get; } = null;
 
 }
